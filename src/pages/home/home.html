@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Movies</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-content class="card-background-page">
+
+    <!-- <ion-card>
+      <img src="assets/movie/movie0.jpg"/ width="720" height="1080">
+      <div class="card-title">São Paulo</div>
+      <div class="card-subtitle">41 Listings</div>
+    </ion-card> -->
+    <ion-grid>
+      <ion-row>
+<ion-col *ngFor="let movie of movies; let i=index">
+
+    <ion-card >
+      <img [src]="'assets/movie/' + movie.img"    />
+      <div class="card-title">{{movie.director}}</div>
+      <div class="card-subtitle">64 Listings</div>
+    </ion-card>
+
+
+</ion-col>
+</ion-row>
+</ion-grid>
+
+<ion-card>
+  <img src="assets/movie/movie2.jpg"/>
+  <div class="card-title">San Francisco</div>
+  <div class="card-subtitle">72 Listings</div>
+</ion-card>
+
+<ion-card>
+  <img src="assets/movie/movie3.jpg"/>
+  <div class="card-title">Madison</div>
+  <div class="card-subtitle">28 Listings</div>
+</ion-card>
+  </ion-content>
+</ion-content>
