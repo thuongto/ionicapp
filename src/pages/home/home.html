@@ -8,7 +8,8 @@
     <ion-content class="card-background-page">
 <ion-col *ngFor="let movie of movies; let i=index">
     <ion-card >
-      <img [src]="'assets/movie/' + movie.img"/>
+      <img [src]="'assets/movie/' + movie.img" (click)="launchInfo({image: movie.img, director: movie.director, rating: movie.rating, moviename: movie.moviename,
+                                                        year: movie.year, description: movie.description})"/>
       <div class="card-subtitle">{{movie.rating}} <ion-icon name="star"></ion-icon></div>
     </ion-card>
 </ion-col>

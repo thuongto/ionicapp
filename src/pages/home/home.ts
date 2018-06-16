@@ -3,11 +3,14 @@ import { NavController } from 'ionic-angular';
 
 import { DatabaseserviceProvider } from '../../providers/databaseservice/databaseservice';
 import { Movie } from '../../model/movie';
+import { MoviesinfoPage } from '../../pages/moviesinfo/moviesinfo';
+
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
 
   movies: Array <Movie> = [];
@@ -32,5 +35,9 @@ export class HomePage {
         this.movies.push( movies[ keys[i] ]);
       }
   }
+  launchInfo(data){
+    this.navCtrl.push(MoviesinfoPage, data);
+  }
+
 
 }

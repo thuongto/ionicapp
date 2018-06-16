@@ -13,7 +13,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { DatabaseserviceProvider } from '../providers/databaseservice/databaseservice';
-
 import { HttpClientModule } from '@angular/common/http';
 
 
