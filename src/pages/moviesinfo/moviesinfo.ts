@@ -14,8 +14,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'moviesinfo.html',
 })
 export class MoviesinfoPage {
+  img: string;
+  director: string;
+  rating: string;
+  moviename: string;
+  year: string;
+  description:string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.img = navParams.data.image;
+    this.director = navParams.data.director;
+    this.rating = navParams.data.rating;
+    this.moviename = navParams.data.moviename;
+    this.year = navParams.data.year;
+    this.description = navParams.data.description;
+    console.log(navParams);
+
+
   }
 
   ionViewDidLoad() {
