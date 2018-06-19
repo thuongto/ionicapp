@@ -1,12 +1,14 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      List of movies
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content >
-
-
+  <ion-card-header>
+    List of Movies
+  </ion-card-header>
+  <ion-content padding>
+  <h3 text-center>Movie List</h3>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list no-lines *ngFor="let movie of movies; let i=index">
+    <button ion-item (click)="launchInfo({image: movie.img, director: movie.director, rating: movie.rating, moviename: movie.moviename,
+                                                      year: movie.year, description: movie.description})">
+      {{ movie.moviename }}
+    </button>
+  </ion-list>
 </ion-content>

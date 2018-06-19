@@ -6,11 +6,24 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>moviesinfo</ion-title>
+    <ion-title>Movie Information</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
+  <ion-item >
+            <img [src]="'assets/movie/' + img">
+    </ion-item>
+<ion-card>
+  <ion-card-content>
+      <h1 >{{moviename}}</h1>
+      <p >{{description}}</p>
+      <p >Director: {{director}}</p>
+      <p >Year: {{year}}</p>
+      <p >Rating: {{rating}}</p>
+  </ion-card-content>
+</ion-card>
+
 
 </ion-content>
